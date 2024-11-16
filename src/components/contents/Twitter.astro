@@ -1,0 +1,51 @@
+---
+import SubTitle from "../../components/SubTitle.astro";
+---
+
+
+ 
+  <div class="twitter" id="contents-twitter">
+  
+    <span>
+      <div class="se">
+       <SubTitle title="公式Twitter(X)" subTitle="忘れ物情報など" /> 
+       
+      </div>
+    </span>
+
+    <div class="test">
+      <a class="twitter-timeline" data-height="300" href="https://twitter.com/NitacGakuseikai?ref_src=twsrc%5Etfw">Tweets by NitacGakuseikai</a> 
+      </a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      
+    </div>
+  </div>
+
+<style>
+ 
+ .twitter{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top:30px;
+  }
+
+.test{
+  width:100%;
+  position:relative;
+
+}
+  .se{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  span{
+    vertical-align:baseline;
+  }
+
+ 
+
+
+</style>
