@@ -44,7 +44,7 @@ let maps = [
     <div id="loading">
         <Icon name="mingcute:loading-line" class="loading-icon" />
         <p class="hope">情報を更新中です。</p>
-        <p class="hope">5秒間待ってくれ！！</p>
+        <p class="hope">しばし待て！！</p>
         <button class="loading-cancel text-16">閉じる</button>
     </div>
 
@@ -53,10 +53,7 @@ let maps = [
     <SubTitle  title="トーナメント" />
     </div>
 
-    <button class="reload">
-        <Icon name="ion:reload" class="reload-icon" />
-        <p class="text-16">最新情報をGet!!</p>
-    </button>
+    <p class="announce">最新情報を確認するには<strong>ブラウザを再読み込み</strong>してね！</p>
     <div class="acordion-wrapper">
         {
             maps.map((item) => (
@@ -82,18 +79,6 @@ let maps = [
         fill: red;
     }
 
-    .reload {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-        margin-block: 20px;
-        padding: 10px;
-        border-radius: 4px;
-        background-color: #bcd4ff;
-        cursor: pointer;
-    }
-
     .hope{
         font-size: 20px;
 		font-family: "Zen Kaku Gothic Antique", sans-serif;
@@ -110,12 +95,6 @@ let maps = [
         width: 24px;
         height: 24px;
         color: var(--color-white);
-    }
-
-    .reload-icon {
-        width: 16px;
-        height: 16px;
-        margin-inline: 5px;
     }
 
     #loading {
@@ -142,7 +121,7 @@ let maps = [
     .loading-icon {
         width: 100px;
         height: 100px;
-        color: #bcd4ff;
+        color: #315daa;
         animation: spin 1s linear infinite;
         transition: all 3s ease-in-out;
     }
@@ -160,8 +139,34 @@ let maps = [
         padding: 12px 20px;
         margin-top: 10px;
         border-radius: 50px;
-        background-color: #bcd4ff;
+        border-style: none;
+        color: white;
+        background-color: #315daa;
         cursor: pointer;
+    }
+
+    .announce {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: max-content;
+        margin-block: 1rem 2rem;
+        padding: 1.2rem;
+        padding-left: 3rem;
+        border: #333333;
+        border-radius: 12px;
+        background-color: black;
+        color: white;
+        line-height: 1.6;
+    }
+
+    .announce::before {
+        content: "💡";
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        margin-right: .2rem;
+        font-size: 1.2rem;
     }
 
     .acordion-wrapper {
@@ -169,13 +174,10 @@ let maps = [
     }
 
     .accordion-001 {
+        margin-bottom: 7px;
         max-width: 100%;
         max-height: 600px;
         background-color: #bcd4ff;
-    }
-
-    .accordion-001:not([open]) {
-        margin-bottom: 7px;
     }
 
     .accordion-001 summary {
@@ -267,11 +269,6 @@ let maps = [
     window.onload = () => {
         getTournamentData();
     };
-
-    const reloadButton = document.querySelector(".reload");
-    reloadButton.addEventListener("click", () => {
-        getTournamentData();
-    });
 
     const cancelButton = document.querySelector(".loading-cancel");
     cancelButton.addEventListener("click", () => {
