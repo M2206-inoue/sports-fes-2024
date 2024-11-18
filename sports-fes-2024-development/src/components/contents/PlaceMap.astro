@@ -1,0 +1,127 @@
+---
+import SubTitle from "../SubTitle.astro";
+import { Icon } from "astro-iconify";
+---
+
+<div class="map">
+
+    <div class="label">
+    <Icon name="gis:map-route" class="sportIcon" />
+    <SubTitle title="会場マップ" />
+    </div>
+
+  <div class="maps">
+    <h2 class="order">～スクロールします～</h2>
+
+    <div class="globalmap">
+      <h2 class="globalmaplabel">全体マップ</h2>
+      <img src="../../../public/map-png/2024_sports_all.png">
+    </div>
+
+
+    <div class="globalmap">
+      <h2 class="globalmaplabel">詳細マップ</h2>
+        <div class="domesticmap">
+
+          <div class="domesticitem">
+            <p class="domesticlabel">テニスコート</p>
+         <img src="../../../public/map-png/2024_sports_tennis.png">
+          </div>
+
+          <div class="domesticitem">
+            <p class="domesticlabel">武道場</p>
+         <img src="../../../public/map-png/2024_sports_dojo.png">
+          </div>
+
+          <div class="domesticitem">
+            <p class="domesticlabel">グラウンド</p>
+         <img src="../../../public/map-png/2024_sports_ground.png">
+          </div>
+
+          <div class="domesticitem">
+            <p class="domesticlabel">体育館</p>
+         <img src="../../../public/map-png/2024_sports_gym.png">
+          </div>
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<style is:global>
+ 
+  .order{
+    font-size:32px;
+    color:#ffffff;
+    text-align: center;
+    padding-bottom:50px;
+    padding-top:10px;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+  }
+
+ .maps{
+  position: relative;
+ }
+ 
+ .label{
+  display: flex;
+  align-items: center;
+  gap :8px;
+ }
+
+ .sportIcon {
+        width: 24px;
+        height: 24px;
+        color: var(--color-white);
+    }
+ 
+  .globalmap{
+	width:80%;
+  margin-left: auto;
+  margin-right: auto;
+	padding:2em; /* ボックス内側余白 */
+	position:relative; /* 配置(ここを基準に) */
+	border: 5px double #ffffff;/* ボックスの線 (太さ・種類・色)*/
+  text-align:center;
+}
+
+.globalmaplabel {
+	font-size: 32px;/* タイトル文字の大きさ */
+	font-family: "Zen Kaku Gothic Antique", sans-serif;
+	color: #ffffff; /* タイトル文字色 */
+  background-color:#315daa;
+	padding: 0 5px;/*タイトルの余白*/
+	line-height: 1;/*タイトルの行の高さ*/
+	position:absolute;/* 配置(ここを動かす) */
+	top: -18px; /*上からの距離*/
+	left: 50%; /*左からの距離*/
+  transform:translateX(-50%);
+}
+
+.globalmap img{
+  width:80%;
+  
+}
+
+.domesticmap{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.domesticitem{
+  flex-basis: 40%;
+  flex-grow: 1;
+}
+
+.domesticlabel{
+  font-size:24px;
+  color:#ffffff;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+}
+
+</style>
+ 

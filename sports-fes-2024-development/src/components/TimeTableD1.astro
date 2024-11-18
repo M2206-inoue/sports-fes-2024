@@ -1,0 +1,87 @@
+---
+import { Icon } from "astro-iconify";
+---
+
+  
+
+  <div class="table">
+    <div class="scroll">
+      <img class="scrollTitle" src="../../public/timetable-png/timelabel.png">
+      <img class="scrollItems" src="../../public/timetable-png/tableday1.png">
+    </div>
+        
+        
+      
+  </div>
+
+    
+
+
+
+<style>
+  .table {
+    height:300px;
+    overflow: scroll;
+  }
+
+ 
+
+  .fixed {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+ 
+    height:fit-content;
+  }
+
+  .fixedTitle {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width:1600px;
+  }
+
+
+
+  .fixedIcons {
+    width: 100%;
+    background-color: var(--color-white);
+  }
+  .fixedIconHolder {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fixedIcon {
+    width: 28px;
+    height: 28px;
+    color: #315daa;
+  }
+ 
+  .scroll{
+    width:1600px;
+    height:fit-content;
+  }
+
+
+  .scrollTitle {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    overflow-y:hidden;
+    width: 1600px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: 4px;
+  }
+  
+  .scrollItems {
+    position:relative;
+    width: 1600px;
+    bottom:34px;
+  }
+</style>

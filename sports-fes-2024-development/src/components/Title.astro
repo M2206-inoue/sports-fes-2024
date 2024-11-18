@@ -1,0 +1,155 @@
+
+---
+import { Icon } from "astro-iconify";
+---
+
+<div class="titleContainer">
+    <a href="/"><h1 class="text-24 title">スポーツ大会<br>2024</h1></a>
+
+    <div class="menubtn">
+    <Icon name="quill:hamburger" class="searchIcon" />
+    </div>
+
+</div>
+
+<div class="searchContainer">
+    <Icon name="bitcoin-icons:cross-outline" class="closeBtn" />
+    <p class="note text-16">各競技のルールと会場をご確認ください!</p>
+    <ul class="jumpLink">
+        <li class="text-20">
+            <a href="/">
+                <Icon name="ion:home" class="sportIcon" />
+                トップページにもどる
+            </a>
+        </li>
+        <li class="text-20">
+            <a href="/map#contents-placeMap">
+                <Icon name="gis:map-route" class="sportIcon" />
+                会場マップ
+            </a>
+        </li>
+        <li class="text-20">
+            <a href="/results#contents-tournament">
+                <Icon name="ion:trophy-outline" class="sportIcon" />
+                トーナメント結果
+            </a>
+        </li>
+        <li class="text-20">
+            <a href="/#contents-rulebook">
+                <Icon name="mi:document" class="sportIcon" />
+                競技ルール
+            </a>
+        </li>
+        <li class="text-20">
+            <a href="https://forms.gle/6wC6UYwWfNVvZrLK8" target="_blank" rel=”noopener">
+                <Icon name="material-symbols:mail-outline" class="sportIcon" />
+                お問い合わせ
+            </a>
+        </li>
+       
+    </ul>
+</div>
+
+<style>
+    .titleContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        height: 60px;
+        padding: 10px 20px;
+        background-color: #000000;
+    }
+    .title {
+        color: var(--color-white);
+        line-height:1.0;
+        font-size:32px;
+        font-style:italic;
+    }
+
+    .menubtn{
+     
+        height:48px;
+        width:48px;
+        background-color:#b90130;
+    }
+    .searchIcon {
+        position:relative; 
+        left:6px;
+        top:6px;
+        width: 36px;
+        height: 36px;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+
+    
+    .searchContainer {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        max-width: 800px;
+        height: 100dvh;
+        background-color: #b90130;
+        display: none;
+        padding: 10px 0;
+        flex-direction: column;
+        justify-content: start;
+        z-index: 15;
+        color: var(--color-white);
+    }
+    .is-active {
+        display: flex;
+    }
+    .note {
+        margin-bottom: 20px;
+        margin-left: 20px;
+        padding-bottom:3px;
+        border-bottom: 2px solid var(--color-white);
+        width: fit-content;
+    }
+    li {
+        list-style: none;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    a {
+        color: var(--color-white);
+        text-decoration: none;
+    }
+    li a {
+        align-items: center;
+        display: flex;
+    }
+    .closeBtn {
+        position:relative;
+        right:12px;
+        align-self: flex-end;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        margin: 16px 16px 24px 16px;
+    }
+    .sportIcon {
+        width: 24px;
+        height: 24px;
+        color: var(--color-white);
+        margin-right: 10px;
+    }
+</style>
+
+<script>
+    document.querySelector('.searchIcon').addEventListener('click', function(){
+        document.querySelector('.searchContainer').classList.toggle('is-active');
+    });
+    document.querySelector('.closeBtn').addEventListener('click', function(){
+        document.querySelector('.searchContainer').classList.toggle('is-active');
+    });
+
+    document.querySelector('a[href*="/#contents-rulebook"]').addEventListener('click', function(){
+        document.querySelector('.searchContainer').classList.toggle('is-active');
+    });
+
+</script>

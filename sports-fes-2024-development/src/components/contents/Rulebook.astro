@@ -1,0 +1,186 @@
+---
+import { Icon } from 'astro-iconify'
+import SubTitle from "../../components/SubTitle.astro";
+
+---
+
+<div class="bookcontainer">
+<div class="anchor" id="contents-rulebook"></div>
+<SubTitle title="ルールブック" />
+
+ <div class="rulebook">
+    
+    <a class="card-link" href="/sports/common">
+        <div class="ruleItem" >
+         <button class="ruleButton">
+            <Icon name="fa6-solid:globe" class="sportIcon" />
+            <p class="text-12 sportName">共通ルール</p>
+         </button>
+        </div>
+     </a>
+    
+        <a class="card-link" href="/sports/basketball">
+        <div class="ruleItem" >
+         <button class="ruleButton">
+            <Icon name="fa6-solid:basketball" class="sportIcon" />
+            <p class="text-12 sportName">バスケットボール</p>
+         </button>
+        </div>
+        </a>
+
+         <a class="card-link" href="/sports/tabletennis">
+            <div class="ruleItem" >
+             <button class="ruleButton">
+                <Icon name="fa-solid:table-tennis" class="sportIcon" />
+                <p class="text-12 sportName">卓球</p>
+             </button>
+            </div>
+         </a>
+
+    
+         <a class="card-link" href="/sports/tennis">
+            <div class="ruleItem">
+               <button class="ruleButton">
+                <Icon name="cil:tennis" class="sportIcon" />
+                <p class="text-12 sportName">硬式テニス</p>
+               </button>
+           </div>
+        </a>
+
+        <a class="card-link" href="/sports/softball">
+         <div class="ruleItem">
+             <button class="ruleButton">
+              <Icon name="fa6-solid:baseball-bat-ball" class="sportIcon" />
+              <p class="text-12 sportName">ソフトボール</p>
+             </button>
+         </div>
+         </a>
+
+         <a class="card-link" href="/sports/soccer">
+          <div class="ruleItem">
+                 <button class="ruleButton">
+                 <Icon name="fluent:sport-soccer-24-filled" class="sportIcon" />
+                 <p class="text-12 sportName">サッカー</p>
+                </button>
+          </div>
+         </a>
+
+         <a class="card-link" href="/sports/badminton">
+             <div class="ruleItem">
+               <button class="ruleButton">
+                 <Icon name="icon-park-outline:badminton" class="sportIcon" />
+                 <p class="text-12 sportName">バドミントン</p>
+               </button>
+             </div>
+        </a>
+
+        <a class="card-link" href="/sports/volleyball">
+            <div class="ruleItem">
+              <button class="ruleButton">
+                <Icon name="fa-solid:volleyball-ball" class="sportIcon" />
+                <p class="text-12 sportName">バレーボール</p>
+              </button>
+            </div>
+        </a>
+
+        <a class="card-link" href="/sports/relay">
+          <div class="ruleItem">
+            <button class="ruleButton">
+              <Icon name="bx:run" class="sportIcon" />
+              <p class="text-12 sportName">リレー</p>
+             </button>
+          </div>
+        </a>
+
+        <a class="card-link" href="/sports/tugofwar">
+           <div class="ruleItem">
+              <button class="ruleButton">
+                <Icon name="game-icons:rope-coil" class="sportIcon" />
+                <p class="text-12 sportName">綱引き</p>
+              </button>
+            </div>
+        </a>
+
+
+
+ </div>
+</div>
+
+<style>
+    .bookcontainer{
+     
+    }
+
+    .rulebook {
+        width: 100%;
+        display: grid;
+        grid-gap: 14px;
+       
+    }
+    @media screen and (max-width: 300px) {
+        .rulebook {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media screen and (min-width: 301px) and (max-width: 430px) {
+        .rulebook {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media screen and (min-width: 431px) and (max-width: 600px) {
+        .rulebook {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    @media screen and (min-width: 601px) {
+        .rulebook {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    .sportIcon {
+        width: 36px;
+        height: 36px;
+        color: #ffffff;
+    }
+    .sportName {
+        color: #ffffff;
+    }
+
+    .card-link{
+        text-decoration:none;
+    }
+
+    .ruleItem {
+        width: 100%;
+        min-width: 128px;
+        height: 128px;
+        border-radius: 15px;
+        border: solid 2px #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 6px;
+        text-decoration: none;
+        background-color: #315daa;
+    }
+    .ruleButton {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 6px;
+        text-decoration: none;
+        cursor:pointer;
+    }
+    
+</style>
+
