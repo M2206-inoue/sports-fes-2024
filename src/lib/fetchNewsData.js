@@ -2,7 +2,7 @@ const newsValues = [];
 
 export async function fetchNewsData() {
   try {
-    var scriptUrl = "https://script.google.com/macros/s/AKfycbwEA9edcjj8_1k3Ket2XXEbwg3FW3kof2Y36AiaiFBCz-ySVtlWXjo10fYzzOkdXgco/exec";
+    var scriptUrl = "https://script.google.com/macros/s/AKfycbzrwkYzBHwSDlJfmXd9P5xqOcbAInyNuQA11bQmjfPyJAHpVplcghWdW7b7NZd_rK4Q/exec";
     // fetchを使用してデータを取得
     const newNewsValues = [];
 
